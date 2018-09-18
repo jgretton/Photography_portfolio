@@ -1,0 +1,56 @@
+// Colors
+$color-main:         #D07C7C;
+$color-white:        #ffffff;
+$color-black:        #000000;
+$color-gray-dark:    #696969;
+$color-gray:         #848282;
+$color-gray-light:   #A0A0A0;
+
+$color-gray-header:      #5A5957;
+$color-gray-background:  #D3D3D3;
+
+
+
+$color-border-light: #EBEBEB;
+
+$BACKGROUND-GRADIENT:linear-gradient(45deg, #726193 20%, $color-main 60%, #ffe4b4);
+
+//font
+$base__font-size: 16;
+
+
+@function calculateRem($size) {
+    $remSize: $size / $base__font-size;
+    @return #{$remSize}rem;
+  }
+  
+  
+  $font-h-lg:     48;
+  $font-h-md:     25;
+  $font-p-lg:     16;
+  $font-p-md:     14;
+
+  
+  $font-family-h: 'Playfair Display', sans-serif;
+  $font-family-p:  'Raleway', sans-serif;
+  
+  $font-weight-light:  300;
+  $font-weight-normal: 400;
+  $font-weight-bold:   700;
+  
+  $line-height: 1.4;
+  
+  
+  //breakpoints
+  $breakpoint-lg: 1015px;
+  $breakpoint-md:  768px;
+  $breakpoint-sm:  480px;
+  
+  
+  //box-shadow
+  $box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+  //transition
+  $transition: all 300ms ease-in-out;
+
+  

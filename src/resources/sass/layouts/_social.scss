@@ -1,0 +1,78 @@
+.social{
+height: auto;
+width: auto;
+position: relative;
+padding-top: 131px;
+}
+.social__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include flexbox;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social__icon{
+    height: 51px;
+    width:51px;
+    cursor: pointer;
+    position: relative;
+    // margin-right: 99px;
+    &:last-of-type{margin-right:0;}
+
+    i{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        transition: $transition;
+    }
+
+    &::after{
+        @include pseudo;
+        height: 21px;
+        width:21px;
+        border-radius: 25px;
+        transition: $transition;
+        // background-color:transparent;
+        // background-color: #E6B5B5;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    &::before{
+        @include pseudo;
+        height:33px;
+        width:33px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        transition: $transition;
+    }
+
+    &:hover{   
+        &::after{
+            height:51px;
+            width:51px;
+            background-color: #E6B5B5;
+        }
+
+        &::before{
+            height: 63px;
+            width:63px;
+            border: 1px solid #E6B5B5;
+            transition: $transition;
+        }
+
+        i{
+            color: white;
+            transition: $transition;
+        }
+    }
+}

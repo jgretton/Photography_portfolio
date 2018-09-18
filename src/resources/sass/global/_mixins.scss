@@ -1,0 +1,53 @@
+//centers block element
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+
+//psuedo mixin
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+//underline Mixin
+@mixin underline($height: 3px, $width: false, $background-color: false, $left: 50%, $transform: translateX(-50%)){
+    height: $height;
+    width:$width;
+    background-color: $background-color;
+    left: $left;
+    transform: $transform;
+}
+
+//font mixin
+@mixin font($font-family:false , $colour: false, $weight: false,  $lh: false) {
+    @if $font-family{font-family: $font-family}
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+
+//flexbox
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  // Px To Rem
+  @mixin fontSize($size) {
+    font-size: #{$size}px; //Fallback in px
+    font-size: calculateRem($size);
+  }
+
+  // centers item
+  @mixin center(){
+      top: 50%;
+      transform: translateY(-50%);
+  }

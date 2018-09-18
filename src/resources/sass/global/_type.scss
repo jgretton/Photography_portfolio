@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:300,400');
+h1{
+    @include font($font-family-h, $color-white, $font-weight-normal, $line-height);
+    @include fontSize($font-h-lg);
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    @include font($font-family-h, $color-gray-header, $font-weight-normal, $line-height);
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    @include fontSize($font-h-md);
+}
+
+h3{
+    @include font($font-family-h, $color-white, $font-weight-normal, $line-height);
+    margin:0;
+    padding: 0;
+    @include fontSize($font-h-md);
+}
+
+p{
+    @include font($font-family-p,  $color-gray, $font-weight-light, $lh: 2.6);
+    @include fontSize($font-p-md);
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    @include font($font-family-p, $color-gray-dark, $font-weight-normal, $line-height);
+    text-decoration: none;
+    @include fontSize($font-p-md);
+}
+.white{
+    color:$color-white !important;
+}

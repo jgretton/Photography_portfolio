@@ -1,0 +1,84 @@
+.content__wrap{
+    max-width: 777px;
+    height: auto;
+    position: relative;
+    @include push--auto;
+   
+}
+.content__title{
+    position: relative;
+    height: auto;
+    max-width: auto;
+    text-align: center;
+
+
+    &::after{
+        @include pseudo;
+        @include underline($width: 62px, $background-color: $color-main);
+        margin-top: 17px;
+    }
+}
+
+.content__sub-title{
+    height: auto;
+    width: auto;
+    position: relative;
+    text-align: center;
+    padding-bottom: 41px;
+
+    span{
+        letter-spacing: 3px;
+    }
+}
+
+.content__testimonial{
+    height: auto;
+    width: auto;
+    text-align: center;
+
+    p{
+        font-size: calculateRem(13);
+        font-weight: $font-weight-light;
+        color: $color-gray-light;
+    }
+
+}
+
+.content__info{
+    height: auto;
+    width: auto;
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+    @include push--auto;
+}
+
+.content__social{
+    max-width:500px;
+    height:63px;
+    position: relative;
+    @include push--auto;
+
+    margin-top: 96px;
+}
+
+.content__grid{
+    height: auto;
+    margin-top: 67px;
+}
+
+.content__button{
+    height: auto;
+    max-width: auto;
+    text-align: center;
+    padding-top: 79px;
+}
+
+.content__form{
+    height: auto;
+    max-width:585px;
+    position: relative;
+    @include push--auto;
+
+    padding: 10px;
+}

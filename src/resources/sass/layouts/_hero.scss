@@ -1,0 +1,40 @@
+.hero{
+    height: calc(100vh - 56px);
+    width:100%;
+    position: relative;
+
+    transition: height 99999999999ms;
+
+    z-index: 10;
+
+    background: url('../images/Header-picture.jpg') center left  no-repeat;
+    background-size: cover;
+
+    @include flexbox;
+    flex-direction: column;
+
+    @media(max-width: $breakpoint-md){
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Header-picture.jpg') center left no-repeat;
+        background-size:cover;
+        
+    }
+
+    .content__wrap{
+        @include center;
+    }
+}
+
+.hero__content{
+    
+    &:after{
+        background-color:$color-white !important;
+    }
+
+    & + .content__info{
+        max-width:461px;
+        p{ 
+            font-size: calculateRem($font-p-lg);
+            color: white !important;
+        }
+    }
+}
