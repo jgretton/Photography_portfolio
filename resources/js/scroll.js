@@ -1,0 +1,1 @@
+$(window).scroll(function(){$(window).scrollTop()>=300?$("header").addClass("fixed-header"):$("header").removeClass("fixed-header")});
